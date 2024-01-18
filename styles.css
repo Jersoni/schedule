@@ -6,10 +6,6 @@
     font-size: 12px;
 }
 
-body {
-    overflow: hidden;
-}
-
 header {
     display: flex;
     flex-direction: column;
