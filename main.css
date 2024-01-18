@@ -6,10 +6,6 @@
     font-size: 12px;
 }
 
-body {
-    overflow: hidden;
-}
-
 header {
     display: flex;
     flex-direction: column;
@@ -153,9 +149,12 @@ main > div > div:not(.column-0 > div) {
     height: 7px;
     background-color: rgba(77, 150, 184, .7);
 }
+<<<<<<< HEAD:main.css
 
 @media (max-width: 288px) {
     * {
         font-size: 10px;
     }
 }
+=======
+>>>>>>> dfdd0bb0e0975d4e2def092052c145e01b8c0c55:styles.css
