@@ -46,6 +46,7 @@ main {
     min-height: 25px;
     margin-bottom: 18px;
     border-right: 0;
+    /* comment */
 }
 
 .weekday-header > div {
