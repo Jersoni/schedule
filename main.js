@@ -5,8 +5,6 @@ const weekday = document.querySelector('.week-day')
 dateToday.textContent = date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
 weekday.textContent = date.toLocaleString('en', { weekday: 'long' })
 
-date.setHours(10)
-
 // date
 let column = '1'
 column = weekday.textContent === 'Monday' || weekday.textContent === 'Wednesday' 
