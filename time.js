@@ -37,4 +37,4 @@ if (hour < 9) {
 }
 
 let subjectElement = document.querySelector(`.column-${column} > div:nth-of-type(${row})`)
-subjectElement.style.border = '1px solid rgba(77, 150, 184, .5)'
+subjectElement.style.border = '1px solid rgba(0, 0, 0, .5)'
