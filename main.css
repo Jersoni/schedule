@@ -43,15 +43,18 @@ main {
     margin-bottom: 18px;
     border-right: 0;
     color: rgb(118, 118, 118);
-    /* comment */
 }
 
 .weekday-header > div {
     width: 100%;
+    text-align: center;
+    font-weight: 600;
+    transform: translateX(-8px) translateY(5px);
+    
 }
 
 .weekday-header > div:nth-of-type(1) {
-    max-width: 20%;
+    max-width: 23%;
 }
 
 .column-0 {

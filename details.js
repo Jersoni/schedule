@@ -78,7 +78,7 @@ setInterval(() => {
     }
 }, 10);
 
-// check circle 
+// check circle / checkbox
 let checkboxElements = document.querySelectorAll('.material-symbols-outlined')
 
 setInterval(() => {
@@ -88,13 +88,27 @@ setInterval(() => {
 checkboxElements.forEach(checkbox => {
     checkbox.textContent = "radio_button_unchecked"
     checkbox.addEventListener('click', () => checkCircleState(checkbox))
+
 })
+
+let removeTextboxTimeout
 
 function checkCircleState(checkbox){
     if(checkbox.textContent === "radio_button_unchecked") {
         checkbox.textContent =  "radio_button_checked"
+        checkbox.style.color = "rgb(65, 132, 195)"
+        checkbox.parentElement.children[1].color = "rgba(0, 0, 0, .60)"
+        removeTextboxTimeout = setTimeout(function() {
+            if(checkbox.textContent = "radio_button_unchecked") {
+                removeParentElement(checkbox)
+            }
+            return removeTextboxTimeout
+        }, 2000);
     } else {
         checkbox.textContent =  "radio_button_unchecked"
+        checkbox.parentElement.children[1].color = "rgba(0, 0, 0, .1)"
+        checkbox.style.color = "rgb(85, 85, 85)"
+        clearTimeout(removeTextboxTimeout)
     }
 }
 
