@@ -13,10 +13,10 @@
 <body>
 
     <!-- Details page -->
-    <div id="details-div" class="details-container">
+    <div id="details-div">
             
         <div class="close-container">
-            <i class="fa fa-close"></i>
+            <span class="close">Done</span>
         </div>
 
         <div class="details-main">
@@ -28,23 +28,35 @@
                 <span>Description</span>
                 <span>Systems Administration and</span>
             </div>
-            <div class="instructor">
-                <span>Instructor</span>
-                <span>A. Ranido</span>
-            </div>
             <div class="schedule">
                 <span>Schedule</span>
                 <span>7:30 am - 9:00 am</span>
             </div>
+            <div class="instructor">
+                <span>Instructor</span>
+                <span>A. Ranido</span>
+            </div>
 
             <div class="todo">
-                <span>Reminder</span>
-                <span class="material-symbols-outlined">
-                    radio_button_unchecked
-                </span>
-                <span class="material-symbols-outlined">
-                    radio_button_checked
-                </span>
+                <span class="todo-header">Reminders</span>
+
+                <div class="no-reminders">No Reminders</div>
+
+                <div class="todo-item-container">
+                    <!-- <div class="todo-item">
+                        <span class="material-symbols-outlined">
+                            radio_button_unchecked
+                        </span>
+                        <textarea class="todo-textbox"></textarea>
+                        <i class="fa fa-trash-can"></i>
+                    </div> -->
+                </div>
+                
+                <div class="add-todo-item">
+                    <i class="fa-solid fa-plus"></i>
+                    <Span class="new-reminder">New Reminder</Span>
+                </div>
+                
             </div>
         </div>
     </div>
