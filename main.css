@@ -27,9 +27,10 @@ header {
 
 main {
     display: grid;
-    grid-template-columns: 24% 38% 38%;
+    grid-template-columns: 18% 41% 41%;
     height: 80vh;
     transform: translateY(-43px);
+    padding-right: 5px;
 }
 
 /* Weekday header */
@@ -106,7 +107,7 @@ main > div > div:not(.column-0 > div) {
 .column-2 > div:nth-of-type(4),
 .column-2 > div:nth-of-type(5),
 .column-2 > div:nth-of-type(6) {
-    background-color: rgb(238, 243, 245);
+    border: 1px solid rgba(0, 0, 0, .3);
     color: rgba(00, 00, 00, .90);
     padding: 5px;
     color: rgb(47, 47, 47);
