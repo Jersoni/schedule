@@ -109,19 +109,20 @@
     height: 30px;
     width: 100%;
     border: none;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     margin-left: 5px;
     outline: none;
     font-size: 16px;
     padding-right: 36px;
-    padding-bottom: 10px;
+    padding-bottom: 10px !important;
     overflow: hidden;
     resize: none;
+    border-radius: 0 !important;
 }
 
 /* checkbox */
 .material-symbols-outlined {
-    color: rgb(85, 85, 85);
+    color: rgb(180, 180, 180);
 }
 
 /* add new reminder */
@@ -153,7 +154,7 @@
 
 .fa-trash-can {
     position: absolute;
-    right: 45px;
+    right: 25px;
     transform: translateY(3px);
     font-size: 16px;
     color: rgb(230, 116, 116);

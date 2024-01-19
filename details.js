@@ -107,7 +107,7 @@ function checkCircleState(checkbox){
     } else {
         checkbox.textContent =  "radio_button_unchecked"
         checkbox.parentElement.children[1].color = "rgba(0, 0, 0, .1)"
-        checkbox.style.color = "rgb(85, 85, 85)"
+        checkbox.style.color = "rgb(180, 180, 180)"
         clearTimeout(removeTextboxTimeout)
     }
 }
