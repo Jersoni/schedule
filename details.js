@@ -7,6 +7,7 @@ const backShadow = document.getElementById('backshadow-div')
 // open details page
 subject1.addEventListener('click', () => {
     detailsElement.classList.add('details-container')
+    detailsElement.style.display = "block"
     backShadow.classList.add('backshadow')
     setTimeout(() => {
         detailsElement.style.transform = "translateY(-100%)"
