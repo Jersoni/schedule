@@ -6,6 +6,13 @@
     font-size: 12px;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -28,8 +35,7 @@ header {
 main {
     display: grid;
     grid-template-columns: 18% 41% 41%;
-    height: 80vh;
-    transform: translateY(-43px);
+    height: 100%;
     padding-right: 5px;
 }
 
@@ -41,7 +47,6 @@ main {
     justify-content: space-between;
     border: 1px solid rgb(180, 180, 180);
     min-height: 25px;
-    margin-bottom: 18px;
     border-right: 0;
     color: rgb(118, 118, 118);
 }
@@ -67,7 +72,6 @@ main {
 }
 
 .column-0 > div {
-    transform: translateY(-5px);
     font-size: 10px;
 }
 
@@ -75,8 +79,7 @@ main {
 .column-1,
 .column-2 {
     height: 90vh;
-    padding-top: 44px;
-    padding-bottom: 20px;
+    padding-top: 20px;
     display: flex;
     text-align: center;
     display: grid;
@@ -143,6 +146,7 @@ main > div > div:not(.column-0 > div) {
 .column-2 > div:nth-of-type(6) {
     grid-row: 19 / 21;
     padding: 5px;
+    min-height: 100%;
 }
 
 .pointer {

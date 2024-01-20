@@ -9,18 +9,20 @@ subject1.addEventListener('click', () => {
     detailsElement.classList.add('details-container')
     detailsElement.style.display = "block"
     backShadow.classList.add('backshadow')
+    backShadow.style.opacity = "100%"
     setTimeout(() => {
-        detailsElement.style.transform = "translateY(-100%)"
-    }, 10)
+        detailsElement.style.bottom = "0px"
+    }, 10);
 })
 
 // close details page
 document.querySelector('.close').addEventListener('click', () => {
-    backShadow.classList.remove('backshadow')
-    detailsElement.style.transform = "translateY(0)"
+    detailsElement.style.bottom = "-95vh"
+    backShadow.style.opacity = "0"
     setTimeout(() => {
+        backShadow.classList.remove('backshadow')
         detailsElement.style.display = "none"
-    }, 500);
+    }, 600);
 
 })
 

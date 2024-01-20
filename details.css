@@ -5,19 +5,17 @@
 
 #details-div {
     position: fixed;
+    min-height: 95vh;
 }
-
 
 /* container */
 .details-container {
-    position: absolute;
     width: 100%;
-    height: 95%;
+    bottom: -95vh;
     background-color: rgb(255, 255, 255);
     border-radius: 10px 10px 0 0;
-    top: 100%; /* change later (-95 to 95%) */
     z-index: 2;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     overflow: hidden;
     display: block;
 }
@@ -29,6 +27,8 @@
     background-color: rgba(0, 0, 0, .7);
     z-index: 1;
     display: block !important;
+    opacity: 0;
+    transition: all 0.5s ease;
 }
 
 
