@@ -3,6 +3,10 @@
     display: none;
 }
 
+#details-div {
+    position: fixed;
+}
+
 
 /* container */
 .details-container {
@@ -41,7 +45,6 @@
     font-weight: 600;
     color: rgb(62, 62, 62);
     height: 100%;
-    width: 100%;
     text-align: end;
     padding-right: 15px;
 }
