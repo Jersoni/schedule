@@ -26,9 +26,12 @@ document.querySelector('.close').addEventListener('click', () => {
 
 })
 
+// pointer events behind details page
 setInterval(() => {
-    if(true){
-
+    if(detailsElement.style.display === "block"){
+        main.style.pointerEvents = "none"
+    } else {
+        main.style.pointerEvents = "all"
     }
 }, 100);
 
