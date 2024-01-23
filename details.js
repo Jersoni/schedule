@@ -1,11 +1,24 @@
 const subject1 = document.querySelector(".column-1 > div:nth-of-type(1)")
-const main = document.getElementsByTagName("main")
+const main = document.querySelector(".main")
 
 const detailsElement = document.getElementById('details-div')
 const backShadow = document.getElementById('backshadow-div')
 
+// 
+
+const subjects = document.querySelectorAll(".subject")
+let subjectsArray = []
+
+subjects.forEach(subject => {
+    subjectsArray.push(subject)
+})
+
+subjectsArray.forEach(subject => {
+    subject.addEventListener('click', openDetails)
+})
+
 // open details page
-subject1.addEventListener('click', () => {
+function openDetails() {
     detailsElement.classList.add('details-container')
     detailsElement.style.display = "block"
     backShadow.classList.add('backshadow')
@@ -13,7 +26,102 @@ subject1.addEventListener('click', () => {
     setTimeout(() => {
         detailsElement.style.bottom = "0px"
     }, 10);
-})
+
+    // apply changes to details page according to which subject
+    const subjectInfo = document.querySelector('.subject-info')
+    const descriptionInfo = document.querySelector('.description-info')
+    const scheduleInfo = document.querySelector('.schedule-info')
+    const instructorInfo = document.querySelector('.instructor-info')
+
+    function passInDetailsInformation(subject, description, schedule, instructor) {
+        subjectInfo.textContent = subject
+        descriptionInfo.textContent = description
+        scheduleInfo.textContent = schedule
+        instructorInfo.textContent = instructor
+    }
+
+    if(this === subjectsArray[0] || this === subjectsArray[4]) {
+        let schedule
+        if (this === subjectsArray[0]) {
+            schedule = '7:30 am - 9:00 am'
+        } else {
+            schedule = '2:30 pm - 4:00 pm'
+        }
+        passInDetailsInformation(
+            'IT 223',
+            'Systems Administration and',
+            schedule,
+            'A. Ranido'
+        )
+    } else if (this === subjectsArray[1] || this === subjectsArray[6]) {
+        let schedule
+        if (this === subjectsArray[1]) {
+            schedule = '9:00 am - 10:00 am'
+        } else {
+            schedule = '7:30 am - 9:00 am'
+        }
+        passInDetailsInformation(
+            'IT 222 A',
+            'Fundamentals of Information',
+            schedule,
+            'Arnel Baguinon'
+        )
+    } else if (this === subjectsArray[2]) {
+        passInDetailsInformation(
+            'SOCSCI 222',
+            'The Contemporary World',
+            '10:30 am - 12:00 pm',
+            'Christian Gajelan'
+        )
+    } else if (this === subjectsArray[3] || this === subjectsArray[5]) {
+        let schedule
+        if (this === subjectsArray[3]) {
+            schedule = '1:00 pm - 2:30 pm'
+        } else {
+            schedule = '4:00 pm - 5:00 pm'
+        }
+        passInDetailsInformation(
+            'IT 221 A',
+            'Fundamentals of Systems Integration',
+            schedule,
+            'Mikko Cablao'
+        )
+    } else if (this === subjectsArray[7]) {
+        passInDetailsInformation(
+            'SOC SCI 223',
+            'Culture and Society in Southeast Asia',
+            '7:30 am - 9:00 am',
+            'Nette Anthony Lomero'
+        )
+    } else if (this === subjectsArray[8]) {
+        passInDetailsInformation(
+            'PATH FIT 4A',
+            'Sports',
+            '10:30 am - 12:00 pm',
+            'Myrna Quindao'
+        )
+    } else if (this === subjectsArray[9] || this === subjectsArray[11]) {
+        let schedule
+        if (this === subjectsArray[9]) {
+            schedule = '1:00 pm - 2:30 pm'
+        } else {
+            schedule = '4:00 pm - 5:00 pm'
+        }
+        passInDetailsInformation(
+            'COMP 221 A',
+            'Application Development',
+            schedule,
+            'Mich Ombid'
+        )
+    } else if (this === subjectsArray[10]) {
+        passInDetailsInformation(
+            'SOC SCI 221',
+            'The Life and Works of Rizal',
+            '7:30 am - 9:00 am',
+            'Nette Anthony Lomero'
+        )
+    }
+}
 
 // close details page
 document.querySelector('.close').addEventListener('click', () => {
@@ -23,7 +131,6 @@ document.querySelector('.close').addEventListener('click', () => {
         backShadow.classList.remove('backshadow')
         detailsElement.style.display = "none"
     }, 600);
-
 })
 
 // pointer events behind details page
@@ -39,7 +146,6 @@ setInterval(() => {
 // todo item container
 const todoItemContainer = document.querySelector('.todo-item-container')
 const noRemindersLabel = document.querySelector('.no-reminders')
-
 
 // adjust textarea height 
 setInterval(() => {
